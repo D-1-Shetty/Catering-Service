@@ -3,10 +3,10 @@ import banner from '../../assets/banner.png'
 
 const Banner = () => {
   return (
-    <div className='w-full h-80 bg-orange-50  drop-shadow-lg mt-2'>
-            <img src={banner} alt="" className='w-fit h-80 ml-[500px] ' />
-    
-          </div>
+    <div className='w-full h-80 bg-orange-50 shadow'>
+      <img src={banner} alt="" className='w-fit h-80 ml-[500px] ' />
+
+    </div>
   )
 }
 

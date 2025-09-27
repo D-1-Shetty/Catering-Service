@@ -3,3 +3,7 @@
 body{
     background-color:#fff7ed
 }
+:root{
+    --primary-color: #223040;
+    --secondary-color:#ff914c;
+}

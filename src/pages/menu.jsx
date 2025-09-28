@@ -1,9 +1,11 @@
 import React from 'react'
 import Starters from '../assets/starters.png'
+import Navbar from '../component/Navbar/navbar'
 
 const home = () => {
   return (
     <div>
+      <Navbar/>
 
       <div className='h-20 w-full shadow-md flex justify-center items-center bg-white'>
       <h1 className='font-bold text-4xl font-serif'>Our Menu</h1>
@@ -18,10 +20,11 @@ const home = () => {
           <li><a href='#'>Special Combos / Packages</a> </li>
         </ul>
       </div>
+      <h1 className='text-xl font-bold ml-15 mt-7'>Popular Dishes</h1>
 
-      <div className='h-83 w-64 shadow-md ml-15 mt-15 bg-white flex justify-center items-center flex-col rounded-lg'>
-        <h1 className='mb-3 text-2xl font-bold font-serif'>Starters & Snacks</h1>
-        <img src={Starters} alt="" className='w-52 h-60  drop-shadow-sm'/>
+      <div className='h-83 w-64 shadow-md ml-15 mt-6 bg-white flex justify-center items-center flex-col rounded-lg'>
+        <h1 className='mb-3 text-2xl font-bold font-serif'>Dish name</h1>
+        
       </div>
     </div>
   )

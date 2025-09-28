@@ -6,7 +6,7 @@ import { FaLocationDot } from 'react-icons/fa6'
 
 const Navbar = () => {
   return (
-    <div className='h-[100px] w-full bg-[#223040] flex items-center drop-shadow-sm justify-evenly'>
+    <div className='h-[100px] w-full bg-[#223040] flex items-center drop-shadow-sm justify-evenly font-serif'>
       <div className='inline'>
         <img src={logo} alt="" className='h-24 w-24 ml-2.5' />
       </div>

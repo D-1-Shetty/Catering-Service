@@ -1,8 +1,56 @@
 import React from 'react'
 import Starters from '../assets/starters.png'
 import Navbar from '../component/Navbar/navbar'
+import MenuTabs from '../component/MenuTabs/menuTabs'
 
 const home = () => {
+  const menu=[
+    {
+      label:'Starters & Snacks',
+      content:{
+        title:'Starters & Snacks',
+        description:'welcome to starters and snacks page'
+
+      }
+    },
+      {
+        
+        label:'Main Course',
+        content:{
+          title:'Main Course',
+          description:'welcome to main course page'
+        }
+      },
+      {
+        label:'Rice & Breads',
+        content:{
+          title:'Rice & Breads',
+          description:'welcome to rice and breads page'
+        }
+      },
+      {
+        label:'Beverages',
+        content:{
+          title:'Beverages',
+          description:'welcome to beverages page'
+        }
+      },
+      {
+        label:'Desserts',
+        content:{
+          title:'Desserts',
+          description:'welcome to desserts page'
+        }
+      },
+      {
+        label:'Special Combos / Packages',
+        content:{
+          title:'Special Combos / Packages',
+          description:'Welcome to Our combos page '
+        
+      }
+    }
+  ]
   return (
     <div>
       <Navbar/>
@@ -10,23 +58,14 @@ const home = () => {
       <div className='h-20 w-full shadow-md flex justify-center items-center bg-white'>
       <h1 className='font-bold text-4xl font-serif'>Our Menu</h1>
       </div>
-      <div className='w-full h-10 shadow text-black font-bold'>
-        <ul className='flex items-center justify-evenly pt-1.5 '>
-          <li><a href='#'>Starters & Snacks</a></li>
-          <li><a href='#'>Main Course</a> </li>
-          <li><a href='#'>Rice & Breads </a> </li>
-          <li><a href='#'>Beverages</a> </li>
-          <li><a href='#'>Desserts</a> </li>
-          <li><a href='#'>Special Combos / Packages</a> </li>
-        </ul>
+      <div>
+        <MenuTabs menu={menu}/>
+       
       </div>
-      <h1 className='text-xl font-bold ml-15 mt-7'>Popular Dishes</h1>
-
-      <div className='h-83 w-64 shadow-md ml-15 mt-6 bg-white flex justify-center items-center flex-col rounded-lg'>
-        <h1 className='mb-3 text-2xl font-bold font-serif'>Dish name</h1>
+      
         
       </div>
-    </div>
+    
   )
 }
 

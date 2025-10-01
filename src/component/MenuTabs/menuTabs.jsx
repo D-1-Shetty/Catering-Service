@@ -4,7 +4,7 @@ const MenuTabs = ({ menu }) => {
     const [activeMenu, setActiveMenu] = useState(0)
     const renderContent=(content)=>{
         return(
-            <div className='p-6 bg-white shadow-lg mt-2 border border-gray-200 rounded-lg '>
+            <div className='p-6 bg-white shadow-lg mt-2 border border-gray-200 rounded-lg h-screen '>
                 <h1 className='text-2xl font-semibold mb-3 text-orange-500'>{content.title}</h1>
                 <p className='text-gray-500 '>{content.description}</p>
             </div>
@@ -19,7 +19,7 @@ const MenuTabs = ({ menu }) => {
                 ))
                 }
             </div>
-                <div className='mt-3 text-2xl'>{renderContent(menu[activeMenu].content )}</div>
+                <div className='mt-3 text-2xl '>{renderContent(menu[activeMenu].content )}</div>
         </div>
 
 

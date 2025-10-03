@@ -1,7 +1,12 @@
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa';
+import { useState } from 'react';
 
 const login = () => {
+    const[login,setLogin]=useState(true);
+    const loginSet=()=>{
+        setLogin(!login);
+    }
     return (
         <div className='min-h-screen w-full bg-gradient-to-r from-orange-400 via-orange-200 to-orange-400 flex justify-center items-center'>
             <div className='h-[600px] w-[450px] bg-white shadow-[0_8px_20px_rgba(0,0,0,0.5)] rounded-lg '>
@@ -29,13 +34,13 @@ const login = () => {
                     <a href='#' className='ml-16 text-orange-600 font-bold'>Forgot Password?</a>
                     </div>
                 <div className='flex justify-center items-center'>
-                    <button className='font-extrabold bg-orange-400 text-white h-10 w-30 rounded-md flex justify-center items-center gap-0.5 mt-12'>Login
+                    <button className='font-extrabold bg-orange-400 text-white h-10 w-30 rounded-md flex justify-center items-center gap-0.5 mt-12'>{login?'log In':'Sign In'}
                         <FaArrowRight size={20} color='white' />
                     </button>
                 </div>
                 <div className='flex mt-7 ml-14'>
-                    <h1 className='opacity-50'>Don't have an account?</h1>
-                    <a href='#' className='font-bold text-orange-600'>Create</a>
+                    <h1 className='opacity-50'>{login?"Don't have an account?":"Already have an account?"}</h1>
+                    <a href='#' className='font-bold text-orange-600' onClick={loginSet}>{login?<p>Create</p>:<p>Log In</p>}</a>
                 </div>
 
             </div>

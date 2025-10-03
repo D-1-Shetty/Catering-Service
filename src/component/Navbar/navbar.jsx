@@ -1,10 +1,19 @@
-import React from 'react'
-import logo from '../../assets/logo.png'
-import { FaSearch, FaShoppingCart,FaArrowRight } from 'react-icons/fa'
-import { FaLocationDot } from 'react-icons/fa6'
+import React from 'react';
+import logo from '../../assets/logo.png';
+import { FaSearch, FaShoppingCart,FaArrowRight } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
+import { useNavigate} from 'react-router-dom'
+
 
 
 const Navbar = () => {
+  const navigate=useNavigate();
+  const cartNavigation=()=>{
+    navigate('/cart');
+  }
+  const logoutNavigation=()=>{
+    navigate('/login');
+  }
   return (
     <div className='h-[100px] w-full bg-[#223040] flex items-center drop-shadow-sm justify-evenly font-serif'>
       <div className='inline'>
@@ -24,11 +33,11 @@ const Navbar = () => {
         <input type="text" placeholder='Search for the food' className='flex-1 focus:outline-none px-3 ' />
 
       </div>
-      <div className='border h-10 w-28 flex bg-[var(--secondary-color)] text-[var(--primary-color)] justify-center items-center font-bold rounded-md shadow'>
+      <div className='border h-10 w-28 flex bg-[var(--secondary-color)] text-[var(--primary-color)] justify-center items-center font-bold rounded-md shadow cursor-pointer' onClick={cartNavigation}>
         <FaShoppingCart size={24} />
         <h2 className='ml-0.5'>Cart</h2>
       </div>
-      <div className='flex font-bold h-10 w-28 bg-[var(--secondary-color)] justify-center items-center text-[var(--primary-color)] rounded-md shadow'>
+      <div className='flex font-bold h-10 w-28 bg-[var(--secondary-color)] justify-center items-center text-[var(--primary-color)] rounded-md shadow cursor-pointer' onClick={logoutNavigation}>
         <h2 className='mr-1'>logout</h2>
         <FaArrowRight/>
       </div>
